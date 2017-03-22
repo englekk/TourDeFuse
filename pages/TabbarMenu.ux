@@ -1,9 +1,9 @@
 <DockPanel ux:Class="TabbarMenu">
-	<Router ux:Dependency="router" />
+    <Router ux:Dependency="router" />
 
-	<NavigationBar title="Tab Bar" />
+    <NavigationBar title="Tab Bar" />
 
-	<JavaScript>
+    <JavaScript>
         var pages = [
             {"name":"page1", "highlight":"#34495e", "icon":"../images/icon-hexagon.png"},
             {"name":"page2", "highlight":"#3498db", "icon":"../images/icon-star.png"},

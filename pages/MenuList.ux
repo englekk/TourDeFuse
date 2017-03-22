@@ -15,6 +15,7 @@
 			{ label:"Video", page:"videoMenu" },
 			{ label:"WebView", page:"webViewMenu" },
 			{ label:"Tab Bar", page:"tabbarMenu" },
+			{ label:"Rotating List", page:"rotatingList" },
 		];
 
 		module.exports = {

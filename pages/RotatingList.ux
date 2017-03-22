@@ -1,0 +1,61 @@
+<DockPanel ux:Class="RotatingList">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Rotating List" />
+
+	<SwipeGesture ux:Name="swipeGesture" Direction="Up" Length="200" Type="Active"/>
+
+	<ScrollView ux:Class="RotatingPage">
+		<string ux:Property="title" />
+
+		<StackPanel ux:Name="bottomPartOuter">
+			<JavaScript>
+				var itemList = [];
+				for(var i = 1; i <= 20; ++i) itemList.push("Row " + i);
+				module.exports = {
+					itemList
+				}
+			</JavaScript>
+
+			<StackPanel Background="#06F">
+				<Text Value="{ReadProperty title}" Margin="12, 18" FontSize="19" Color="#fff" />
+				<Rectangle Width="100%" Height="1" Background="#ddd" />
+			</StackPanel>
+
+			<Each Items="{itemList}">
+				<StackPanel Background="#FFF">
+					<Text Value="{}" Margin="12, 18" FontSize="19" />
+					<Rectangle Width="100%" Height="1" Background="#ddd" />
+				</StackPanel>
+			</Each>
+
+			<EnteringAnimation>
+				<Set Target="this.ScrollPosition" Value="0" />
+				<Rotate Target="bottomPartOuter" DegreesY="70" Duration="1" />
+			</EnteringAnimation>
+			<ExitingAnimation>
+				<Rotate Target="bottomPartOuter" DegreesY="-70" Duration="1" />
+			</ExitingAnimation>
+		</StackPanel>
+	</ScrollView>
+
+	<Panel Dock="Bottom">
+		<PageIndicator Navigation="pageControl" Alignment="TopCenter">
+			<Circle ux:Template="Dot" ux:Name="dotFac" Color="#C6C6C9" Margin="5" Width="10" Height="20">
+				<ActivatingAnimation>
+					<Scale Factor="1.1"/>
+					<Change dotFac.Color="#56C7C8" />
+				</ActivatingAnimation>
+			</Circle>
+		</PageIndicator>
+	</Panel>
+
+	<Viewport Dock="Fill" Perspective="300" CullFace="Back">
+		<PageControl ux:Name="pageControl">
+			<RotatingPage title="Header 1" />
+			<RotatingPage title="Header 2" />
+			<RotatingPage title="Header 3" />
+			<RotatingPage title="Header 4" />
+		</PageControl>
+	</Viewport>
+</DockPanel>
