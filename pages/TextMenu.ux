@@ -1,0 +1,45 @@
+<DockPanel ux:Class="TextMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Text" />
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="color" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<Text Value="default is black" />
+				<Text Value="#286090" Color="#286090" />
+				<Text Value="#0f0" Color="#0f0" />
+				<Text Value="rgba(1, 0, 0, 0.5)" Color="1, 0, 0, 0.5" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="font-size" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<Text Value="16" FontSize="16" />
+				<Text Value="32" FontSize="32" />
+				<Text Value="50" FontSize="50" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="text-align" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<Text Value="left" />
+				<Text Value="center" TextAlignment="Center" />
+				<Text Value="right" TextAlignment="Right" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="line-spacing (30)" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<Text LineSpacing="30">
+					The CSS line-height
+is
+LineSpacing.
+				</Text>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

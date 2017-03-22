@@ -1,0 +1,26 @@
+<DockPanel ux:Class="WebViewMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="WebView" />
+
+	<NativeViewHost>
+        <WebView ux:Name="webView" Dock="Fill" Url="https://wonhada.com/?ht_kb_category=fusetools" />
+    </NativeViewHost>
+    <Grid ColumnCount="3" Dock="Bottom">
+    	<Basic.Button Text="Back">
+    		<Clicked>
+                <GoBack TargetNode="webView" />
+            </Clicked>
+    	</Basic.Button>
+    	<Basic.Button Text="Forward">
+    		<Clicked>
+                <GoForward TargetNode="webView" />
+            </Clicked>
+    	</Basic.Button>
+    	<Basic.Button Text="Refresh">
+    		<Clicked>
+                <Reload TargetNode="webView" />
+            </Clicked>
+    	</Basic.Button>
+    </Grid>
+</DockPanel>

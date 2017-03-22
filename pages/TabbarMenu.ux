@@ -1,0 +1,50 @@
+<DockPanel ux:Class="TabbarMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Tab Bar" />
+
+	<JavaScript>
+        var pages = [
+            {"name":"page1", "highlight":"#34495e", "icon":"../images/icon-hexagon.png"},
+            {"name":"page2", "highlight":"#3498db", "icon":"../images/icon-star.png"},
+            {"name":"page3", "highlight":"#aa3377", "icon":"../images/icon-square.png"},
+            {"name":"page4", "highlight":"#88cc22", "icon":"../images/icon-triangle.png"}
+        ];
+        module.exports = {
+            pages: pages,
+            pageCount: pages.length
+        };
+    </JavaScript>
+
+    <Page ux:Class="MyPage">
+        <ResourceFloat4 Key="Highlight" Value="{highlight}" />
+        <FileImageSource ux:Key="Icon" File="{icon}" />
+        <Image File="../images/fuse-logo.png" StretchDirection="DownOnly" />
+        <Rectangle Color="{highlight}" />
+    </Page>
+
+    <DockPanel>
+        <PageControl ux:Name="pageControl">
+            <Each Items="{pages}">
+                <MyPage />
+            </Each>
+        </PageControl>
+
+        <PageIndicator Dock="Bottom" Height="45" Navigation="pageControl">
+            <GridLayout ColumnCount="{pageCount}" />
+            <Panel ux:Template="Dot" Height="45">
+                <ActivatingAnimation>
+                    <Scale Target="icon" Factor="1.5" />
+                </ActivatingAnimation>
+                <Clicked>
+                    <NavigateTo Target="{Page Visual}"/>
+                </Clicked>
+                <Panel ux:Name="icon" Padding="10">
+                    <Image File="../images/icon-star.png" />
+                </Panel>
+                <Rectangle Color="{Page Highlight}" />
+            </Panel>
+        </PageIndicator>
+
+    </DockPanel>
+</DockPanel>

@@ -1,0 +1,99 @@
+<DockPanel ux:Class="CommonStyle">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Common Style" />
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Box Model" Color="#fff" Margin="10" />
+			</Panel>
+			<Panel Padding="20">
+				<Rectangle Width="100" Height="100" Alignment="Left">
+				    <Stroke Width="15" Brush="#000"/>
+				    <Text Value="Box" Color="#000" Margin="20" />
+				</Rectangle>
+			</Panel>
+			<Panel Background="#06F">
+				<Text Value="Border" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="20" ItemSpacing="10">
+				<Text Value="border-width" />
+				<StackPanel Orientation="Horizontal" ItemSpacing="4">
+					<Rectangle Width="60" Height="30" Background="#964">
+					    <Stroke Width="1" Brush="#000"/>
+					</Rectangle>
+					<Rectangle Width="60" Height="30" Background="#964">
+					    <Stroke Width="5" Brush="#000"/>
+					</Rectangle>
+					<Panel Width="60" Height="30">
+					    <Rectangle Height="2" Alignment="Top">
+					        <SolidColor Color="#000"/>
+					    </Rectangle>
+					    <Rectangle Height="2" Alignment="Bottom">
+					        <SolidColor Color="#000"/>
+					    </Rectangle>
+					    <Rectangle>
+					        <SolidColor Color="#964"/>
+					    </Rectangle>
+					</Panel>
+				</StackPanel>
+				<Text Value="border-color" />
+				<StackPanel Orientation="Horizontal" ItemSpacing="4">
+					<Rectangle Width="60" Height="30" Background="#964">
+					    <Stroke Width="2" Brush="#f00"/>
+					</Rectangle>
+					<Rectangle Width="60" Height="30" Background="#964">
+					    <Stroke Width="2" Brush="#0f0"/>
+					</Rectangle>
+					<Rectangle Width="60" Height="30" Background="#964">
+					    <Stroke Width="2" Brush="#00f"/>
+					</Rectangle>
+				</StackPanel>
+				<Text Value="border-radius" />
+				<StackPanel Orientation="Horizontal" ItemSpacing="4">
+					<Rectangle Width="30" Height="30" CornerRadius="50">
+						<SolidColor Color="#964" />
+					</Rectangle>
+					<Rectangle Width="60" Height="30" CornerRadius="10">
+						<SolidColor Color="#964" />
+					</Rectangle>
+					<Rectangle Width="60" Height="30" CornerRadius="10, 10, 0, 0">
+						<SolidColor Color="#964" />
+					</Rectangle>
+					<Rectangle Width="60" Height="30" CornerRadius="0, 0, 10, 10">
+						<SolidColor Color="#964" />
+					</Rectangle>
+				</StackPanel>
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Opacity" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Orientation="Horizontal" Padding="20" ItemSpacing="10">
+				<Rectangle Width="60" Height="30" Background="#964">
+				    <Text Value="1" Color="#fff" Margin="4" />
+				</Rectangle>
+				<Rectangle Width="60" Height="30" Background="#964" Opacity="0.9">
+				    <Text Value="0.9" Color="#fff" Margin="4" />
+				</Rectangle>
+				<Rectangle Width="60" Height="30" Background="#964" Opacity="0.5">
+				    <Text Value="0.5" Color="#fff" Margin="4" />
+				</Rectangle>
+				<Rectangle Width="60" Height="30" Background="#964" Opacity="0.2">
+				    <Text Value="0.2" Color="#fff" Margin="4" />
+				</Rectangle>
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Background-color" Color="#fff" Margin="10" />
+			</Panel>
+			<Grid Padding="20" CellSpacing="4">
+				<Rectangle Width="100%" Height="30" Background="#333">
+				    <Text Value="#333" Color="#fff" Margin="4" />
+				</Rectangle>
+				<Rectangle Width="100%" Height="30" Background="1, 1, 0, 1">
+				    <Text Value="1, 1, 0, 1(rgba)" Color="#f00" Margin="4" />
+				</Rectangle>
+			</Grid>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

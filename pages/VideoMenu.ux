@@ -1,0 +1,41 @@
+<DockPanel ux:Class="VideoMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Video" />
+
+	<StackPanel>
+		<Video ux:Name="video" File="../images/sample_video.mp4" Height="200" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill" />
+		<Grid ColumnCount="2">
+			<Button Height="40" Margin="8">
+			    <Panel>
+			        <Text Value="Pause" Color="#000" Alignment="Center" TextAlignment="Center" />
+			        <Rectangle CornerRadius="4" Layer="Background" Color="#fff">
+			        	<Stroke Width="1" Brush="#ccc"/>
+			        </Rectangle>
+
+			        <Clicked>
+		                <Pause Target="video" />
+		            </Clicked>
+			    </Panel>
+			</Button>
+			<Button Height="40" Margin="8">
+			    <Panel>
+			        <Text Value="Play" Color="#fff" Alignment="Center" TextAlignment="Center" />
+			        <Rectangle CornerRadius="4" Layer="Background" Color="#29a" />
+
+			        <Clicked>
+		                <Resume Target="video" />
+		            </Clicked>
+			    </Panel>
+			</Button>
+		</Grid>
+	</StackPanel>
+
+	<WhileActive Invert="true">
+		<Stop Target="video" />
+	</WhileActive>
+
+	<WhileActive>
+		<Resume Target="video" />
+	</WhileActive>
+</DockPanel>

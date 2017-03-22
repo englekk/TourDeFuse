@@ -1,0 +1,55 @@
+<DockPanel ux:Class="ImageMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Image" />
+
+	<FileImageSource File="../images/example_imagesequence_01.png" ux:Name="Seq0" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_02.png" ux:Name="Seq1" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_03.png" ux:Name="Seq2" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_04.png" ux:Name="Seq3" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_05.png" ux:Name="Seq4" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_06.png" ux:Name="Seq5" ux:AutoBind="false"/>
+	<FileImageSource File="../images/example_imagesequence_07.png" ux:Name="Seq6" ux:AutoBind="false"/>
+
+	<JavaScript>
+		module.exports = {
+			on_ProgressChanged: function (obj, args)
+			{
+				seqTime.pulse();
+			}
+		}
+	</JavaScript>
+	
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="default (JPG, PNG)" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" Alignment="Left">
+				<Image File="../images/fuse.png" Width="100" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="GIF is not supported." Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" Alignment="Left">
+				<Image File="../images/elephant.gif" Width="100" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Sequence images are possible." Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" Alignment="Left">
+		        <Timeline ux:Name="seqTime" PlayMode="Wrap" ProgressChanged="{on_ProgressChanged}">
+		            <Set Target="ImageSeq.Source" Value="Seq0" Delay="0" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq1" Delay="0.1" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq2" Delay="0.2" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq3" Delay="0.3" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq4" Delay="0.4" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq5" Delay="0.5" Direction="Forward"/>
+		            <Set Target="ImageSeq.Source" Value="Seq6" Delay="0.6" Direction="Forward"/>
+		        </Timeline>
+
+		        <Image ux:Name="ImageSeq" File="../images/example_imagesequence_01.png" />
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

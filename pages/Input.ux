@@ -1,0 +1,46 @@
+<DockPanel ux:Class="Input">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Input" />
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = text" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input Text" FontSize="25" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = password" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input Password" FontSize="25" IsPassword="true" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = url" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input URL" FontSize="25" InputHint="URL" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = email" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input Email" FontSize="25" InputHint="Email" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = phone" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input Phone" FontSize="25" InputHint="Phone" />
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="input type = number" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" ItemSpacing="8">
+				<TextInput PlaceholderText="Input Number" FontSize="25" InputHint="Number" />
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

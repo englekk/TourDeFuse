@@ -1,0 +1,59 @@
+<DockPanel ux:Class="Animation">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Animation" />
+
+	<Rectangle ux:Name="rect" X="50%" Y="30%" Width="100" Height="100" Background="#f93">
+		<Text Value="Anim" Color="#fff" Alignment="Center" FontSize="30" />
+	</Rectangle>
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Transform" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="20" Alignment="Left">
+				<Basic.Button Text="Rotate">
+					<Clicked>
+						<Rotate Target="rect" Degrees="90" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Scale">
+					<Clicked>
+						<Scale Target="rect" Factor="0.2" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Move">
+					<Clicked>
+						<Move Target="rect" Y="1.5" RelativeTo="Size" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Skew">
+					<Clicked>
+						<Skew Target="rect" DegreesX="30" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Spin">
+					<Clicked>
+						<Spin Target="rect" Frequency="2" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Others" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="20" Alignment="Left">
+				<Basic.Button Text="Color">
+					<Clicked>
+						<Change rect.Color="#f07" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Opacity">
+					<Clicked>
+						<Change rect.Opacity="0.1" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

@@ -1,0 +1,39 @@
+<DockPanel ux:Class="GradientColor" Background="#2570a4">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Gradient Color" />
+
+	<ScrollView>
+		<StackPanel Padding="4" ItemSpacing="4">
+			<Text Value="Dark to Light" Color="#fff" />
+			<Rectangle Width="100%" Height="80" CornerRadius="10">
+			    <LinearGradient StartPoint="0,0" EndPoint="1,0">
+			        <GradientStop Offset="0" Color="#3db8a5"/>
+			        <GradientStop Offset="1" Color="#9af9eb"/>
+			    </LinearGradient>
+			    <Text Value="to right" Alignment="Center" Color="#fff" FontSize="20" />
+			</Rectangle>
+			<Rectangle Width="100%" Height="80" CornerRadius="10">
+			    <LinearGradient StartPoint="1,0" EndPoint="0,0">
+			        <GradientStop Offset="0" Color="#3db8a5"/>
+			        <GradientStop Offset="1" Color="#9af9eb"/>
+			    </LinearGradient>
+			    <Text Value="to left" Alignment="Center" Color="#fff" FontSize="20" />
+			</Rectangle>
+			<Rectangle Width="100%" Height="80" CornerRadius="10">
+			    <LinearGradient StartPoint="0,0" EndPoint="0,1">
+			        <GradientStop Offset="0" Color="#3db8a5"/>
+			        <GradientStop Offset="1" Color="#9af9eb"/>
+			    </LinearGradient>
+			    <Text Value="to bottom" Alignment="Center" Color="#fff" FontSize="20" />
+			</Rectangle>
+			<Rectangle Width="100%" Height="80" CornerRadius="10">
+			    <LinearGradient StartPoint="0,1" EndPoint="0,0">
+			        <GradientStop Offset="0" Color="#3db8a5"/>
+			        <GradientStop Offset="1" Color="#9af9eb"/>
+			    </LinearGradient>
+			    <Text Value="to top" Alignment="Center" Color="#fff" FontSize="20" />
+			</Rectangle>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

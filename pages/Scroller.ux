@@ -1,0 +1,97 @@
+<DockPanel ux:Class="Scroller">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var items = Observable(
+			{
+				header:"Header 1",
+				itemList:[
+					{ label:"row 1", isHeader:false },
+					{ label:"row 2", isHeader:false },
+					{ label:"row 3", isHeader:false },
+					{ label:"row 4", isHeader:false },
+					{ label:"row 5", isHeader:false },
+				]
+			},
+			{
+				header:"Header 2",
+				itemList:[
+					{ label:"row 1", isHeader:false },
+					{ label:"row 2", isHeader:false },
+					{ label:"row 3", isHeader:false },
+					{ label:"row 4", isHeader:false },
+					{ label:"row 5", isHeader:false },
+				]
+			}
+		);
+
+		function endLoading(){
+			isLoading.value = false;
+
+			items.add({
+				header:"Header " + (items.length + 1),
+				itemList:[
+					{ label:"row 1", isHeader:false },
+					{ label:"row 2", isHeader:false },
+					{ label:"row 3", isHeader:false },
+					{ label:"row 4", isHeader:false },
+					{ label:"row 5", isHeader:false },
+				]
+			});
+		}
+
+		function reloadHandler(){
+			isLoading.value = true;
+			setTimeout(endLoading, 1000);
+		}
+
+		var isLoading = Observable(false);
+
+		module.exports = {
+			items,
+			isLoading: isLoading,
+			reloadHandler: reloadHandler
+		}
+	</JavaScript>
+
+	<NavigationBar title="Scroller" />
+
+	<StackPanel ux:Class="ListItem">
+		<StackPanel ux:Name="content">
+			<StackPanel ux:Name="header" Background="#06F">
+				<Text Value="{header}" Margin="12, 18" FontSize="19" Color="#fff" />
+				<Rectangle Width="100%" Height="1" Background="#ddd" />
+			</StackPanel>
+
+			<Each Items="{itemList}">
+				<StackPanel Background="#FFF">
+					<Text ux:Name="txt" Value="{label}" Margin="12, 18" FontSize="19" />
+					<Rectangle Width="100%" Height="1" Background="#ddd" />
+
+					<WhilePressed>
+						<Change txt.Color="#f00" />
+					</WhilePressed>
+				</StackPanel>
+			</Each>
+		</StackPanel>
+
+		<ScrollingAnimation From="y(this)" To="y(this) + height(content)">
+            <Move Target="header" Y="1" RelativeTo="Size" RelativeNode="content" />
+        </ScrollingAnimation>
+        <ScrollingAnimation From="y(this) + height(content) - height(header)" To="y(this) + height(content)">
+            <Move Target="header" Y="-1" RelativeTo="Size" />
+        </ScrollingAnimation>
+	</StackPanel>
+
+	<ScrollView SnapMinTransform="false">
+		<DockPanel>
+			<CogWheelReload Dock="Top" />
+			<StackPanel Background="#fff">			
+				<Each Items="{items}">
+					<ListItem />
+				</Each>
+			</StackPanel>
+		</DockPanel>
+	</ScrollView>
+</DockPanel>

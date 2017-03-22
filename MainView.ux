@@ -1,0 +1,70 @@
+<App>
+    <Router ux:Name="router" />
+
+    <UserEvent ux:Name="mainEvent"/>
+    <OnUserEvent EventName="mainEvent" Handler="{on_MainEvent}" />
+
+    <JavaScript>
+    	var Observable = require("FuseJS/Observable");
+    	var leftVisibility = Observable("Hidden");
+
+    	function on_MainEvent(args)
+    	{
+    		switch(args.type)
+    		{
+    			case "pushPage":
+    				var _page = args.item.page;
+    				setTimeout(() => { leftVisibility.value = "Visible"; }, 200);
+    				router.push(_page);
+    				break;
+
+    			case "goMain":
+    				leftVisibility.value = "Hidden";
+    				router.goBack();
+    				break;
+    		}
+    	}
+    	
+    	module.exports = {
+    		leftVisibility,
+    		on_MainEvent
+    	}
+    </JavaScript>
+
+    <ClientPanel>
+        <Grid ux:Class="NavigationBar" Columns="50, 1*, 50" Dock="Top" Height="50" Background="#08f">
+        	<string ux:Property="title" />
+
+        	<Panel Alignment="Center" Visibility="{leftVisibility}">
+        		<Image File="./images/backBtn.png" Height="25">
+        			<Clicked>
+        				<RaiseUserEvent EventName="mainEvent">
+        					<UserEventArg Name="type" StringValue="goMain" />
+        				</RaiseUserEvent>
+        			</Clicked>
+        		</Image>
+        	</Panel>
+        	<Panel Alignment="Center">
+        		<Text Value="{ReadProperty title}" Color="#fff" FontSize="19" />
+        	</Panel>
+        	<Panel Alignment="Center">
+        	</Panel>
+        </Grid>
+
+        <Navigator DefaultPath="menuList">
+            <MenuList ux:Template="menuList" router="router" />
+            <HelloWorld ux:Template="helloWorld" router="router" />
+            <CommonStyle ux:Template="commonStyle" router="router" />
+            <Animation ux:Template="animation" router="router" />
+            <GradientColor ux:Template="gradientColor" router="router" />
+            <TextMenu ux:Template="textMenu" router="router" />
+            <ImageMenu ux:Template="imageMenu" router="router" />
+            <Input ux:Template="input" router="router" />
+            <Scroller ux:Template="scroller" router="router" />
+            <SliderMenu ux:Template="sliderMenu" router="router" />
+            <VideoMenu ux:Template="videoMenu" router="router" />
+            <WebViewMenu ux:Template="webViewMenu" router="router" />
+            <TabbarMenu ux:Template="tabbarMenu" router="router" />
+        </Navigator>
+    </ClientPanel>
+</App>

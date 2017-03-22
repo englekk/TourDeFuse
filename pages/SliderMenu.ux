@@ -1,0 +1,72 @@
+<DockPanel ux:Class="SliderMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Slider" />
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var activeIdx = Observable(0);
+
+		// auto-play
+		setInterval(() => { if(activeIdx.value > 5) activeIdx.value = -1; activeIdx.value++; }, 1000);
+
+		module.exports = {
+			activeIdx
+		}
+	</JavaScript>
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="auto-play: false" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" Alignment="Center">
+				<PageControl ux:Name="pageControl">
+					<Image File="../images/example_imagesequence_01.png" />
+					<Image File="../images/example_imagesequence_02.png" />
+					<Image File="../images/example_imagesequence_03.png" />
+					<Image File="../images/example_imagesequence_04.png" />
+					<Image File="../images/example_imagesequence_05.png" />
+					<Image File="../images/example_imagesequence_06.png" />
+					<Image File="../images/example_imagesequence_07.png" />
+				</PageControl>
+
+				<Panel>
+					<PageIndicator Navigation="pageControl" Dock="Bottom" Alignment="TopCenter">
+						<Circle ux:Template="Dot" ux:Name="dotFac" Color="#C6C6C9" Margin="5" Width="10" Height="20">
+							<ActivatingAnimation>
+								<Scale Factor="1.1"/>
+								<Change dotFac.Color="#56C7C8" />
+							</ActivatingAnimation>
+						</Circle>
+					</PageIndicator>
+				</Panel>
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="auto-play: true" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="10" Alignment="Center">
+				<PageControl ux:Name="pageControl2" ActiveIndex="{activeIdx}">
+					<Image File="../images/example_imagesequence_01.png" />
+					<Image File="../images/example_imagesequence_02.png" />
+					<Image File="../images/example_imagesequence_03.png" />
+					<Image File="../images/example_imagesequence_04.png" />
+					<Image File="../images/example_imagesequence_05.png" />
+					<Image File="../images/example_imagesequence_06.png" />
+					<Image File="../images/example_imagesequence_07.png" />
+				</PageControl>
+
+				<Panel>
+					<PageIndicator Navigation="pageControl2" Dock="Bottom" Alignment="TopCenter">
+						<Circle ux:Template="Dot" ux:Name="dotFac" Color="#eeC6C9" Margin="5" Width="10" Height="20">
+							<ActivatingAnimation>
+								<Scale Factor="1.1"/>
+								<Change dotFac.Color="#ff97C8" />
+							</ActivatingAnimation>
+						</Circle>
+					</PageIndicator>
+				</Panel>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

@@ -1,0 +1,48 @@
+<DockPanel ux:Class="MenuList">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		var items = [
+			{ label:"Hello World", page:"helloWorld" },
+			{ label:"Common Style", page:"commonStyle" },
+			{ label:"Animation", page:"animation" },
+			{ label:"Gradient Color", page:"gradientColor" },
+			{ label:"Text", page:"textMenu" },
+			{ label:"Image", page:"imageMenu" },
+			{ label:"Input", page:"input" },
+			{ label:"Scroller", page:"scroller" },
+			{ label:"Slider", page:"sliderMenu" },
+			{ label:"Video", page:"videoMenu" },
+			{ label:"WebView", page:"webViewMenu" },
+			{ label:"Tab Bar", page:"tabbarMenu" },
+		];
+
+		module.exports = {
+			items
+		}
+	</JavaScript>
+
+	<NavigationBar title="Tour de Fuse" />
+
+	<ScrollView>
+		<StackPanel>
+			<Each Items="{items}">
+				<StackPanel ux:Name="container" Background="#fff">
+					<Text ux:Name="txt" Value="{label}" Margin="12, 18" FontSize="19" />
+					<Rectangle Width="100%" Height="1" Background="#ddd" />
+
+					<WhilePressed>
+						<Change txt.Color="#f00" />
+					</WhilePressed>
+					
+					<Clicked>
+	    				<RaiseUserEvent EventName="mainEvent">
+	    					<UserEventArg Name="type" StringValue="pushPage" />
+	    					<UserEventArg Name="item" Value="{}" />
+	    				</RaiseUserEvent>
+	    			</Clicked>
+				</StackPanel>
+			</Each>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

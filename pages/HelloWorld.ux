@@ -1,0 +1,31 @@
+<DockPanel ux:Class="HelloWorld">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Hello World" />
+
+	<ScrollView>
+		<StackPanel ItemSpacing="15">
+			<Text Value="Hello Fuse World!" FontSize="30" Margin="10" />
+			<Rectangle Width="100%" Height="1" Background="#ccc" />
+			<Text Value="And Wonhada World!" FontSize="30" Margin="10" />
+			<Image File="../images/kangmin.jpg" Width="200" />
+			<StackPanel ItemSpacing="0">
+				<Text Alignment="Center">Hi! I'm Kangmin.
+I belong to Jesus.
+So, I'm SO happy!
+				</Text>
+			</StackPanel>
+			<Basic.Button>
+				<Text Alignment="Center" Color="#fff">
+				Go to Wonhada.com!
+(You can learn the Link)
+				</Text>
+				<Clicked>
+					<JavaScript>
+						require("FuseJS/InterApp").launchUri("https://www.wonhada.com");
+					</JavaScript>
+				</Clicked>
+			</Basic.Button>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>
