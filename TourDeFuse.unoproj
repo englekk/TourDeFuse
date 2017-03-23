@@ -39,15 +39,15 @@
       "iPad_76_2x": "AppStoreAssets/icons/iOS/Icon-76@2x.png"
     },
     "LaunchImages": {
-        "iPhone_Portrait_2x": "AppStoreAssets/launchassets/iPhone_Portrait_2x.png",   // 640x960
-        "iPhone_Portrait_R4": "AppStoreAssets/launchassets/iPhone_Portrait_R4.png",   // 640x1136
-        "iPhone_Portrait_R47": "AppStoreAssets/launchassets/iPhone_Portrait_R47.png",  // 750x1334
-        "iPhone_Portrait_R55": "AppStoreAssets/launchassets/iPhone_Portrait_R55.png",  // 1242x2208
-        //"iPhone_Landscape_R55": "AppStoreAssets/launchassets/iPhone_Landscape_R55.png", // 2208x1242
-        "iPad_Portrait_1x": "AppStoreAssets/launchassets/iPad_Portrait_1x.png",     // 768x1024
-        "iPad_Portrait_2x": "AppStoreAssets/launchassets/iPad_Portrait_2x.png",     // 1536x2048
-        //"iPad_Landscape_1x": "AppStoreAssets/launchassets/iPad_Landscape_1x.png",    // 1024x768
-        //"iPad_Landscape_2x": "AppStoreAssets/launchassets/iPad_Landscape_2x.png"     // 2048x1536
+        "iPhone_Portrait_2x": "AppStoreAssets/launchImages/iPhone_Portrait_2x.png",   // 640x960
+        "iPhone_Portrait_R4": "AppStoreAssets/launchImages/iPhone_Portrait_R4.png",   // 640x1136
+        "iPhone_Portrait_R47": "AppStoreAssets/launchImages/iPhone_Portrait_R47.png",  // 750x1334
+        "iPhone_Portrait_R55": "AppStoreAssets/launchImages/iPhone_Portrait_R55.png",  // 1242x2208
+        //"iPhone_Landscape_R55": "AppStoreAssets/launchImages/iPhone_Landscape_R55.png", // 2208x1242
+        "iPad_Portrait_1x": "AppStoreAssets/launchImages/iPad_Portrait_1x.png",     // 768x1024
+        "iPad_Portrait_2x": "AppStoreAssets/launchImages/iPad_Portrait_2x.png",     // 1536x2048
+        //"iPad_Landscape_1x": "AppStoreAssets/launchImages/iPad_Landscape_1x.png",    // 1024x768
+        //"iPad_Landscape_2x": "AppStoreAssets/launchImages/iPad_Landscape_2x.png"     // 2048x1536
     }
   },
   "Packages": [
