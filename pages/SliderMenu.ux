@@ -22,13 +22,13 @@
 			</Panel>
 			<StackPanel Padding="10" Alignment="Center">
 				<PageControl ux:Name="pageControl">
-					<Image File="../images/example_imagesequence_01.png" />
-					<Image File="../images/example_imagesequence_02.png" />
-					<Image File="../images/example_imagesequence_03.png" />
-					<Image File="../images/example_imagesequence_04.png" />
-					<Image File="../images/example_imagesequence_05.png" />
-					<Image File="../images/example_imagesequence_06.png" />
-					<Image File="../images/example_imagesequence_07.png" />
+					<Image File="../assets/example_imagesequence_01.png" />
+					<Image File="../assets/example_imagesequence_02.png" />
+					<Image File="../assets/example_imagesequence_03.png" />
+					<Image File="../assets/example_imagesequence_04.png" />
+					<Image File="../assets/example_imagesequence_05.png" />
+					<Image File="../assets/example_imagesequence_06.png" />
+					<Image File="../assets/example_imagesequence_07.png" />
 				</PageControl>
 
 				<Panel>
@@ -47,13 +47,13 @@
 			</Panel>
 			<StackPanel Padding="10" Alignment="Center">
 				<PageControl ux:Name="pageControl2" ActiveIndex="{activeIdx}">
-					<Image File="../images/example_imagesequence_01.png" />
-					<Image File="../images/example_imagesequence_02.png" />
-					<Image File="../images/example_imagesequence_03.png" />
-					<Image File="../images/example_imagesequence_04.png" />
-					<Image File="../images/example_imagesequence_05.png" />
-					<Image File="../images/example_imagesequence_06.png" />
-					<Image File="../images/example_imagesequence_07.png" />
+					<Image File="../assets/example_imagesequence_01.png" />
+					<Image File="../assets/example_imagesequence_02.png" />
+					<Image File="../assets/example_imagesequence_03.png" />
+					<Image File="../assets/example_imagesequence_04.png" />
+					<Image File="../assets/example_imagesequence_05.png" />
+					<Image File="../assets/example_imagesequence_06.png" />
+					<Image File="../assets/example_imagesequence_07.png" />
 				</PageControl>
 
 				<Panel>

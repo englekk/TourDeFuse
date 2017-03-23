@@ -4,7 +4,7 @@
 	<NavigationBar title="Video" />
 
 	<StackPanel>
-		<Video ux:Name="video" File="../images/sample_video.mp4" Height="200" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill" />
+		<Video ux:Name="video" File="../assets/sample_video.mp4" Height="200" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill" />
 		<Grid ColumnCount="2">
 			<Button Height="40" Margin="8">
 			    <Panel>

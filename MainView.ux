@@ -36,7 +36,7 @@
         	<string ux:Property="title" />
 
         	<Panel Alignment="Center" Visibility="{leftVisibility}">
-        		<Image File="./images/backBtn.png" Height="25">
+        		<Image File="./assets/backBtn.png" Height="25">
         			<Clicked>
         				<RaiseUserEvent EventName="mainEvent">
         					<UserEventArg Name="type" StringValue="goMain" />

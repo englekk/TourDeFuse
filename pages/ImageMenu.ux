@@ -3,13 +3,13 @@
 
 	<NavigationBar title="Image" />
 
-	<FileImageSource File="../images/example_imagesequence_01.png" ux:Name="Seq0" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_02.png" ux:Name="Seq1" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_03.png" ux:Name="Seq2" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_04.png" ux:Name="Seq3" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_05.png" ux:Name="Seq4" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_06.png" ux:Name="Seq5" ux:AutoBind="false"/>
-	<FileImageSource File="../images/example_imagesequence_07.png" ux:Name="Seq6" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_01.png" ux:Name="Seq0" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_02.png" ux:Name="Seq1" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_03.png" ux:Name="Seq2" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_04.png" ux:Name="Seq3" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_05.png" ux:Name="Seq4" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_06.png" ux:Name="Seq5" ux:AutoBind="false"/>
+	<FileImageSource File="../assets/example_imagesequence_07.png" ux:Name="Seq6" ux:AutoBind="false"/>
 
 	<JavaScript>
 		module.exports = {
@@ -26,13 +26,13 @@
 				<Text Value="default (JPG, PNG)" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" Alignment="Left">
-				<Image File="../images/fuse.png" Width="100" />
+				<Image File="../assets/fuse.png" Width="100" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="GIF is not supported." Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" Alignment="Left">
-				<Image File="../images/elephant.gif" Width="100" />
+				<Image File="../assets/elephant.gif" Width="100" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="Sequence images are possible." Color="#fff" Margin="10" />
@@ -48,7 +48,7 @@
 		            <Set Target="ImageSeq.Source" Value="Seq6" Delay="0.6" Direction="Forward"/>
 		        </Timeline>
 
-		        <Image ux:Name="ImageSeq" File="../images/example_imagesequence_01.png" />
+		        <Image ux:Name="ImageSeq" File="../assets/example_imagesequence_01.png" />
 			</StackPanel>
 		</StackPanel>
 	</ScrollView>

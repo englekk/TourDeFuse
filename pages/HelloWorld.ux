@@ -8,7 +8,7 @@
 			<Text Value="Hello Fuse World!" FontSize="30" Margin="10" />
 			<Rectangle Width="100%" Height="1" Background="#ccc" />
 			<Text Value="And Wonhada World!" FontSize="30" Margin="10" />
-			<Image File="../images/kangmin.jpg" Width="200" />
+			<Image File="../assets/kangmin.jpg" Width="200" />
 			<StackPanel ItemSpacing="0">
 				<Text Alignment="Center">Hi! I'm Kangmin.
 I belong to Jesus.

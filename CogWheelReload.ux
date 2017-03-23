@@ -1,8 +1,8 @@
 <Panel ux:Class="CogWheelReload" ClipToBounds="True">
 	
 	<Image ux:Class="Cog" MaxHeight="200" MaxWidth="200" Alignment="Center" />
-	<Cog ux:Class="SmallCog" Color="#3e64b7" File="images/cog1_white.png" Width="60" Height="60" />
-	<Cog ux:Class="BigCog" Color="#3562c4" File="images/cog2_white.png" Width="120" Height="120" />
+	<Cog ux:Class="SmallCog" Color="#3e64b7" File="assets/cog1_white.png" Width="60" Height="60" />
+	<Cog ux:Class="BigCog" Color="#3562c4" File="assets/cog2_white.png" Width="120" Height="120" />
 
 	<!-- places all cog wheels and move rotates them so they fit together -->
 	<Panel ux:Name="cogPanel" Background="#183A6F" Alignment="Top" Height="0" MinHeight="0">
