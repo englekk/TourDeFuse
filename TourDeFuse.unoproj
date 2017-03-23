@@ -1,5 +1,44 @@
 {
   "RootNamespace":"",
+  "Title": "TourDeFuse",
+  "Publisher": "Wonhada.com",
+  "Version": "1.0.2",
+  "Mobile":{
+    "UriScheme": "tour-de-fuse",
+    "Orientations": "Portrait"
+  },
+  "Android": {
+    "SDK": {
+      "MinVersion": 21,
+    },
+    "Description": "The sample for introducing functions of the Fuse.",
+    "VersionCode": 1,
+    "Icons": {
+      "MDPI": "icons/Android/icon@MDPI.png",
+      "HDPI": "icons/Android/icon@HDPI.png",
+      "XHDPI": "icons/Android/icon@XHDPI.png",
+      "XXHDPI": "icons/Android/icon@XXHDPI.png",
+      "XXXHDPI": "icons/Android/icon@XXXHDPI.png"
+    }
+  },
+  "iOS": {
+    "BundleVersion": "1.0.2",
+    "DeploymentTarget": "9.0",
+    "Icons": {
+      "iPhone_29_2x": "icons/iOS/Icon-29@2x.png",
+      "iPhone_29_3x": "icons/iOS/Icon-29@3x.png",
+      "iPhone_40_2x": "icons/iOS/Icon-40@2x.png",
+      "iPhone_40_3x": "icons/iOS/Icon-40@3x.png",
+      "iPhone_60_2x": "icons/iOS/Icon-60@2x.png",
+      "iPhone_60_3x": "icons/iOS/Icon-60@3x.png",
+      "iPad_29_1x": "icons/iOS/Icon-29.png",
+      "iPad_29_2x": "icons/iOS/Icon-29@2x.png",
+      "iPad_40_1x": "icons/iOS/Icon-40.png",
+      "iPad_40_2x": "icons/iOS/Icon-40@2x.png",
+      "iPad_76_1x": "icons/iOS/Icon-76.png",
+      "iPad_76_2x": "icons/iOS/Icon-76@2x.png"
+    }
+  },
   "Packages": [
     "Fuse",
     "FuseJS",
