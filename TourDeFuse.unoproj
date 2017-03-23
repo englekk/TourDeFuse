@@ -5,7 +5,7 @@
   "Version": "1.0.2",
   "Mobile":{
     "UriScheme": "tour-de-fuse",
-    "Orientations": "Portrait"
+    "Orientations": "Auto"
   },
   "Android": {
     "SDK": {
@@ -14,29 +14,40 @@
     "Description": "The sample for introducing functions of the Fuse.",
     "VersionCode": 1,
     "Icons": {
-      "MDPI": "icons/Android/icon@MDPI.png",
-      "HDPI": "icons/Android/icon@HDPI.png",
-      "XHDPI": "icons/Android/icon@XHDPI.png",
-      "XXHDPI": "icons/Android/icon@XXHDPI.png",
-      "XXXHDPI": "icons/Android/icon@XXXHDPI.png"
+      "MDPI": "AppStoreAssets/icons/Android/icon@MDPI.png",
+      "HDPI": "AppStoreAssets/icons/Android/icon@HDPI.png",
+      "XHDPI": "AppStoreAssets/icons/Android/icon@XHDPI.png",
+      "XXHDPI": "AppStoreAssets/icons/Android/icon@XXHDPI.png",
+      "XXXHDPI": "AppStoreAssets/icons/Android/icon@XXXHDPI.png"
     }
   },
   "iOS": {
     "BundleVersion": "1.0.2",
     "DeploymentTarget": "9.0",
     "Icons": {
-      "iPhone_29_2x": "icons/iOS/Icon-29@2x.png",
-      "iPhone_29_3x": "icons/iOS/Icon-29@3x.png",
-      "iPhone_40_2x": "icons/iOS/Icon-40@2x.png",
-      "iPhone_40_3x": "icons/iOS/Icon-40@3x.png",
-      "iPhone_60_2x": "icons/iOS/Icon-60@2x.png",
-      "iPhone_60_3x": "icons/iOS/Icon-60@3x.png",
-      "iPad_29_1x": "icons/iOS/Icon-29.png",
-      "iPad_29_2x": "icons/iOS/Icon-29@2x.png",
-      "iPad_40_1x": "icons/iOS/Icon-40.png",
-      "iPad_40_2x": "icons/iOS/Icon-40@2x.png",
-      "iPad_76_1x": "icons/iOS/Icon-76.png",
-      "iPad_76_2x": "icons/iOS/Icon-76@2x.png"
+      "iPhone_29_2x": "AppStoreAssets/icons/iOS/Icon-29@2x.png",
+      "iPhone_29_3x": "AppStoreAssets/icons/iOS/Icon-29@3x.png",
+      "iPhone_40_2x": "AppStoreAssets/icons/iOS/Icon-40@2x.png",
+      "iPhone_40_3x": "AppStoreAssets/icons/iOS/Icon-40@3x.png",
+      "iPhone_60_2x": "AppStoreAssets/icons/iOS/Icon-60@2x.png",
+      "iPhone_60_3x": "AppStoreAssets/icons/iOS/Icon-60@3x.png",
+      "iPad_29_1x": "AppStoreAssets/icons/iOS/Icon-29.png",
+      "iPad_29_2x": "AppStoreAssets/icons/iOS/Icon-29@2x.png",
+      "iPad_40_1x": "AppStoreAssets/icons/iOS/Icon-40.png",
+      "iPad_40_2x": "AppStoreAssets/icons/iOS/Icon-40@2x.png",
+      "iPad_76_1x": "AppStoreAssets/icons/iOS/Icon-76.png",
+      "iPad_76_2x": "AppStoreAssets/icons/iOS/Icon-76@2x.png"
+    },
+    "LaunchImages": {
+        "iPhone_Portrait_2x": "AppStoreAssets/launchImages/iPhone_Portrait_2x.png",   // 640x960
+        "iPhone_Portrait_R4": "AppStoreAssets/launchImages/iPhone_Portrait_R4.png",   // 640x1136
+        "iPhone_Portrait_R47": "AppStoreAssets/launchImages/iPhone_Portrait_R47.png",  // 750x1334
+        "iPhone_Portrait_R55": "AppStoreAssets/launchImages/iPhone_Portrait_R55.png",  // 1242x2208
+        //"iPhone_Landscape_R55": "AppStoreAssets/launchImages/iPhone_Landscape_R55.png", // 2208x1242
+        "iPad_Portrait_1x": "AppStoreAssets/launchImages/iPad_Portrait_1x.png",     // 768x1024
+        "iPad_Portrait_2x": "AppStoreAssets/launchImages/iPad_Portrait_2x.png",     // 1536x2048
+        //"iPad_Landscape_1x": "AppStoreAssets/launchImages/iPad_Landscape_1x.png",    // 1024x768
+        //"iPad_Landscape_2x": "AppStoreAssets/launchImages/iPad_Landscape_2x.png"     // 2048x1536
     }
   },
   "Packages": [
