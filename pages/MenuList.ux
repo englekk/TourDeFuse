@@ -16,6 +16,7 @@
 			{ label:"WebView", page:"webViewMenu" },
 			{ label:"Tab Bar", page:"tabbarMenu" },
 			{ label:"Rotating List", page:"rotatingList" },
+			{ label:"Fetch (load data)", page:"fetchMenu" },
 		];
 
 		module.exports = {

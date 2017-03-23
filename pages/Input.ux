@@ -9,37 +9,37 @@
 				<Text Value="input type = text" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input Text" FontSize="25" />
+				<TextInput PlaceholderText="Input Text" PlaceholderColor="#ccc" FontSize="25" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="input type = password" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input Password" FontSize="25" IsPassword="true" />
+				<TextInput PlaceholderText="Input Password" PlaceholderColor="#ccc" FontSize="25" IsPassword="true" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="input type = url" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input URL" FontSize="25" InputHint="URL" />
+				<TextInput PlaceholderText="Input URL" PlaceholderColor="#ccc" FontSize="25" InputHint="URL" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="input type = email" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input Email" FontSize="25" InputHint="Email" />
+				<TextInput PlaceholderText="Input Email" PlaceholderColor="#ccc" FontSize="25" InputHint="Email" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="input type = phone" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input Phone" FontSize="25" InputHint="Phone" />
+				<TextInput PlaceholderText="Input Phone" PlaceholderColor="#ccc" FontSize="25" InputHint="Phone" />
 			</StackPanel>
 			<Panel Background="#06F">
 				<Text Value="input type = number" Color="#fff" Margin="10" />
 			</Panel>
 			<StackPanel Padding="10" ItemSpacing="8">
-				<TextInput PlaceholderText="Input Number" FontSize="25" InputHint="Number" />
+				<TextInput PlaceholderText="Input Number" PlaceholderColor="#ccc" FontSize="25" InputHint="Number" />
 			</StackPanel>
 		</StackPanel>
 	</ScrollView>

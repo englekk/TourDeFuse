@@ -1,0 +1,94 @@
+<DockPanel ux:Class="FetchMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Fetch (load data)" />
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+
+		var txt = Observable();
+		var items = Observable(); // {title:, authors:, publishYear: }
+
+		var isLoading = Observable(false);
+
+		module.exports = {
+			txt,
+			items,
+			isLoading,
+			search: (args) => {
+				if(isLoading.value == true || !txt.value) return;
+
+				isLoading.value = true;
+
+				fetch('https://openlibrary.org/search.json?q=' + txt.value, {
+				    method: 'GET',
+				    headers: { "Content-type": "application/json"},
+				}).then(function(response) {
+				    return response.json();
+				}).then(function(responseObject) {
+					items.clear();
+
+					var _items = responseObject.docs;
+					var item = {};
+	                for(var i = 0; i < _items.length; ++i)
+	                {
+	                	if(_items[i].title) item.title = _items[i].title;
+	                	if(_items[i].author_name) item.authors = _items[i].author_name.join(", ");
+	                	if(_items[i].first_publish_year) item.publishYear = _items[i].first_publish_year;
+
+	                    items.add(item);
+	                }
+
+	                isLoading.value = false;
+				}).catch(function(err) {
+				});
+			}
+		}
+	</JavaScript>
+
+	<WhileTrue Value="{isLoading}">
+        <Panel Width="100%" Height="100%" Dock="Fill">
+          <Text Value="Loading..." Alignment="Center" TextColor="#fff"></Text>
+          <Rectangle Background="#000b" />
+        </Panel>
+      </WhileTrue>
+
+	<StackPanel ux:Name="searchContainer" Padding="10" Dock="Top">
+		<Grid ColumnCount="2" Columns="1*, 100">
+			<TextBox Value="{txt}" PlaceholderText="Search Book..." PlaceholderColor="#ccc" Height="40" ClipToBounds="true" />
+			<Basic.Button Text="Search">
+				<Clicked Handler="{search}">
+					<GiveFocus Target="searchContainer" />
+				</Clicked>
+			</Basic.Button>
+		</Grid>
+	</StackPanel>
+
+	<ScrollView Dock="Fill">
+		<StackPanel>
+			<WhileEmpty Items="{items}">
+				<Text Value="There are no items." Alignment="Center" Color="#aaa" />
+			</WhileEmpty>
+
+			<WhileEmpty Items="{items}" Invert="true">
+				<Each Items="{items}">
+					<StackPanel Margin="10, 0">
+						<Grid ColumnCount="2" Columns="60, 1*">
+							<Text Value="Title:" />
+							<Text Value="{title}" Color="#333" />
+						</Grid>
+						<Grid ColumnCount="2" Columns="60, 1*">
+							<Text Value="Author:" />
+							<Text Value="{authors}" Color="#333" />
+						</Grid>
+						<Grid ColumnCount="2" Columns="60, 1*">
+							<Text Value="Date:" />
+							<Text Value="{publishYear}" Color="#333" />
+						</Grid>
+						<Rectangle Width="100%" Height="1" Background="#ccc" Margin="0, 10" />
+					</StackPanel>
+				</Each>
+			</WhileEmpty>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>

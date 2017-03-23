@@ -66,6 +66,7 @@
             <WebViewMenu ux:Template="webViewMenu" router="router" />
             <TabbarMenu ux:Template="tabbarMenu" router="router" />
             <RotatingList ux:Template="rotatingList" router="router" />
+            <FetchMenu ux:Template="fetchMenu" router="router" />
         </Navigator>
     </ClientPanel>
 </App>
