@@ -1,0 +1,15 @@
+<DockPanel ux:Class="PlaySoundMenu">
+	<Router ux:Dependency="router" />
+	
+	<NavigationBar title="Play Sound" />
+	
+	<Basic.Button Text="Play">
+		<Clicked>
+			<PlaySound File="../assets/sample.wav" />
+		</Clicked>
+	</Basic.Button>
+
+	<WhileActive Invert="true">
+		<PlaySound File="../assets/none.wav" />
+	</WhileActive>
+</DockPanel>

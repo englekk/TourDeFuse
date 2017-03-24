@@ -56,7 +56,8 @@
     "Fuse.BasicTheme",
     "Fuse.Launcher",
     "Fuse.Camera",
-    "Fuse.CameraRoll"
+    "Fuse.CameraRoll",
+    "Fuse.Audio"
   ],
   "Includes": [
     "*"

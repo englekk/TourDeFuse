@@ -18,6 +18,7 @@
 			{ label:"Rotating List", page:"rotatingList" },
 			{ label:"Fetch (load data)", page:"fetchMenu" },
 			{ label:"Camera (& Roll)", page:"cameraMenu" },
+			{ label:"Play Sound", page:"playSoundMenu" },
 		];
 
 		module.exports = {

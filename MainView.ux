@@ -68,6 +68,7 @@
             <RotatingList ux:Template="rotatingList" router="router" />
             <FetchMenu ux:Template="fetchMenu" router="router" />
             <CameraMenu ux:Template="cameraMenu" router="router" />
+            <PlaySoundMenu ux:Template="playSoundMenu" router="router" />
         </Navigator>
     </ClientPanel>
 </App>
