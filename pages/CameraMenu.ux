@@ -1,0 +1,58 @@
+<DockPanel ux:Class="CameraMenu">
+	<Router ux:Dependency="router" />
+
+	<NavigationBar title="Camera (&amp; Roll)" />
+
+    <JavaScript>
+        var Observable = require("FuseJS/Observable");
+        var images = Observable();
+
+        module.exports = {
+            images,
+            startCamera: () => {
+                var camera = require('FuseJS/Camera');
+                camera.takePicture(640,480)
+                    .then(function(image)
+                    {
+                        images.add(image);
+                    })
+                    .catch(function(error) {
+                    });
+            },
+            startCameraRoll: () => {
+                var cameraRoll = require("FuseJS/CameraRoll");
+                cameraRoll.getImage()
+                    .then(function(image) {
+                        images.add(image);
+                    }, function(error) {
+                    });
+            }
+        }
+    </JavaScript>
+
+    <Grid ColumnCount="2" Dock="Top">
+    	<Basic.Button Text="Camera" Clicked="{startCamera}" />
+    	<Basic.Button Text="Camera Roll" Clicked="{startCameraRoll}" />
+    </Grid>
+
+    <DockPanel Dock="Fill">
+        <PageControl ux:Name="pageControl" Dock="Fill" ClipToBounds="true">
+            <Each Items="{images}">
+                <ScrollView>
+                    <Image File="{}" StretchMode="UniformToFill" Alignment="Center" />
+                </ScrollView>
+            </Each>
+        </PageControl>
+
+        <Panel Dock="Bottom">
+            <PageIndicator Navigation="pageControl" Alignment="Center">
+                <Circle ux:Template="Dot" ux:Name="dotFac" Color="#C6C6C9" Margin="5" Width="10" Height="20">
+                    <ActivatingAnimation>
+                        <Scale Factor="1.1"/>
+                        <Change dotFac.Color="#56C7C8" />
+                    </ActivatingAnimation>
+                </Circle>
+            </PageIndicator>
+        </Panel>
+    </DockPanel>
+</DockPanel>

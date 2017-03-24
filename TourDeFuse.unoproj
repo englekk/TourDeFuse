@@ -54,7 +54,9 @@
     "Fuse",
     "FuseJS",
     "Fuse.BasicTheme",
-    "Fuse.Launcher"
+    "Fuse.Launcher",
+    "Fuse.Camera",
+    "Fuse.CameraRoll"
   ],
   "Includes": [
     "*"

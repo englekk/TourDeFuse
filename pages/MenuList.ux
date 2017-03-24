@@ -17,6 +17,7 @@
 			{ label:"Tab Bar", page:"tabbarMenu" },
 			{ label:"Rotating List", page:"rotatingList" },
 			{ label:"Fetch (load data)", page:"fetchMenu" },
+			{ label:"Camera (& Roll)", page:"cameraMenu" },
 		];
 
 		module.exports = {
